@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'EnvChanger'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EnvChanger.'
+  s.summary          = 'An always present, draggable button that helps you change your backend environments.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A UIButton that allows you to easily switch between different backend environments. The button is always visible
+and can be dragged around the screen. Tapping it shows an alert that lists your backend environments enum.
+Great for when your testers want to try how your app behaves on development/staging/edge without you having to
+recompile.
                        DESC
 
-  s.homepage         = 'https://github.com/Gavril Tonev/EnvChanger'
+  s.homepage         = 'https://github.com/upnetix/EnvChanger'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Gavril Tonev' => 'gavril.tonev@upnetix.com' }
-  s.source           = { :git => 'https://github.com/Gavril Tonev/EnvChanger.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/upnetix/EnvChanger.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

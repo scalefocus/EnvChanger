@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		031C4DDCA6FB404FA78571F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		101D4C694866A837C3AD789F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		031C4DDCA6FB404FA78571F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		101D4C694866A837C3AD789F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		34221C68EBB7858752788363 /* Pods-EnvChanger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvChanger_Example.debug.xcconfig"; path = "Target Support Files/Pods-EnvChanger_Example/Pods-EnvChanger_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		542B831DCD4507DDD63FEC2C /* EnvChanger.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EnvChanger.podspec; path = ../EnvChanger.podspec; sourceTree = "<group>"; };
+		542B831DCD4507DDD63FEC2C /* EnvChanger.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EnvChanger.podspec; path = ../EnvChanger.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* EnvChanger_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnvChanger_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +156,6 @@
 				A0E6A1E7D3D7B10C92869C08 /* Pods-EnvChanger_Tests.debug.xcconfig */,
 				BD4848DFAF73AF5822DDDC75 /* Pods-EnvChanger_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

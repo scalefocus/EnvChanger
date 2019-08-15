@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import EnvChanger
+
+enum Envs: String, EnvironmentRepresentable {
+    case production = "https://production.server.com/"
+    case staging = "https://staging.server.com/"
+    case development = "https://development.server.com"
+    case testing = "https://10.0.1.1/"
+    case edge = "edge.server.com"
+    
+    var environmentTitle: String {
+        return rawValue
+    }
+}
+
+var ACTIVE_ENVIRONMENT = Envs.production.environmentTitle
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let envChanger = EnvChangerController(envs: Envs.self) { selectedEnvironment in
+            ACTIVE_ENVIRONMENT = selectedEnvironment.environmentTitle
+            
+            print(ACTIVE_ENVIRONMENT)
+        }
+        
+        ACTIVE_ENVIRONMENT = envChanger.getSavedEnvironment()
+        
         // Override point for customization after application launch.
         return true
     }
