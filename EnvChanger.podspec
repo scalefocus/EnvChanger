@@ -27,7 +27,7 @@ recompile.
   s.homepage         = 'https://github.com/upnetix/EnvChanger'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Gavril Tonev' => 'gavril.tonev@upnetix.com' }
+  s.authors          = { 'Gavril Tonev' => 'gavril.tonev@upnetix.com', 'Teodor Marinov' => 'teodor.marinov@upnetix.com' }
   s.source           = { :git => 'https://github.com/upnetix/EnvChanger.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -35,7 +35,7 @@ recompile.
 
   s.source_files = 'EnvChanger/Classes/**/*'
   s.swift_version = '5.0'
-  
+
   # s.resource_bundles = {
   #   'EnvChanger' => ['EnvChanger/Assets/*.png']
   # }

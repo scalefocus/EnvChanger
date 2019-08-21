@@ -1,14 +1,41 @@
-# references:
-# * https://www.objc.io/issues/6-build-tools/travis-ci/
-# * https://github.com/supermarin/xcpretty#usage
+os: osx
+osx_image: xcode10.2
+language: swift
 
-osx_image: xcode7.3
-language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/EnvChanger.xcworkspace -scheme EnvChanger-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+branches:
+  only:
+    - master
+
+stages:
+  - name: lint
+    if: branch = master
+  - name: compile
+    if: branch = master
+  - name: deploy
+    if: branch = master
+
+jobs:
+  include:
+      stage: lint
+      name: iOS / Xcode 10.2
+      cache: cocoapods
+      install: gem install cocoapods -v '~> 1.7.5'
+      script: pod lib lint
+
+      stage: test
+      name: iOS / Xcode 10.2
+      script:
+        - pod install --project-directory=Example
+        - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/EnvChanger.xcworkspace -scheme EnvChanger-Example -sdk iphonesimulator9.2 -destination 'platform=iOS Simulator,OS=12.2,name=iPhone SE' ONLY_ACTIVE_ARCH=NO | xcpretty
+      after_success:
+        - bash <(curl -s https://codecov.io/bash) -cF ios
+      
+      stage: deploy
+      name: '`pod trunk push`'
+      install: gem install cocoapods -v '~> 1.7.0'
+      before_script: |
+        mv .github/PromiseKit.podspec .
+        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" PromiseKit.podspec
+      script: |
+        set -exo pipefail
+        pod trunk push
