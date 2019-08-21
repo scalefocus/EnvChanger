@@ -26,7 +26,7 @@ jobs:
           - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/EnvChanger.xcworkspace -scheme EnvChanger-Example -destination 'platform=iOS Simulator,OS=12.2,name=iPhone SE' ONLY_ACTIVE_ARCH=NO | xcpretty
       
       - stage: deploy
-        install: gem install cocoapods -v '~> 1.7.0'
+        install: gem install cocoapods -v '~> 1.7.5'
         script: |
           set -exo pipefail
           pod trunk push
