@@ -34,7 +34,7 @@ recompile.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'EnvChanger/Classes/**/*'
-  s.swift_version = 5.0
+  s.swift_version = '5.0'
   
   # s.resource_bundles = {
   #   'EnvChanger' => ['EnvChanger/Assets/*.png']
