@@ -27,8 +27,6 @@ jobs:
       script:
         - pod install --project-directory=Example
         - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/EnvChanger.xcworkspace -scheme EnvChanger-Example -sdk iphonesimulator9.2 -destination 'platform=iOS Simulator,OS=12.2,name=iPhone SE' ONLY_ACTIVE_ARCH=NO | xcpretty
-      after_success:
-        - bash <(curl -s https://codecov.io/bash) -cF ios
       
       stage: deploy
       name: '`pod trunk push`'
