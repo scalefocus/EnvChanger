@@ -1,4 +1,4 @@
-# EnvChanger
+# EnvChanger 🧙‍♂️
 
 [![CI Status](https://travis-ci.org/upnetix/EnvChanger.svg?branch=master?style=flat)](https://travis-ci.org/upnetix/EnvChanger/)
 [![Version](https://img.shields.io/cocoapods/v/EnvChanger.svg?style=flat)](https://cocoapods.org/pods/EnvChanger)
@@ -9,7 +9,7 @@
 
 EnvChanger is a simple tool that helps developers and testers to switch between backend environments really quickly without having to download a specific build.
 
-Displays a button in the top right corner that when selected, presents an alert with the given possible environments
+Displays a button in the top left corner that when selected, presents an alert with the given possible environments
 allowing users to easily swap them.
 
 ## Example
@@ -105,6 +105,16 @@ Teodor Marinov, teodor.marinov@upnetix.com
 ## License
 
 EnvChanger is available under the [MIT license](LICENSE).
+
+## Contributing
+
+A new version is released by pushing an updated tag to `master`:
+
+```bash
+# Make changes, commit files
+git tag -a 1.2.3 -m "Release 1.2.3"
+git push --follow-tags
+```
 
 ## TODO
 
