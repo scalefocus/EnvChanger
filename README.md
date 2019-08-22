@@ -100,6 +100,7 @@ pod 'EnvChanger'
 ## Author
 
 Gavril Tonev, gavril.tonev@upnetix.com
+Teodor Marinov, teodor.marinov@upnetix.com
 
 ## License
 
