@@ -30,5 +30,4 @@ jobs:
         script: |
           set -exo pipefail
           pod trunk push
-        on:
-          tags: true
+        if: tag IS present

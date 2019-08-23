@@ -1,6 +1,6 @@
 # EnvChanger 🧙‍♂️
 
-[![CI Status](https://travis-ci.org/upnetix/EnvChanger.svg?branch=master?style=flat)](https://travis-ci.org/upnetix/EnvChanger/)
+[![Build Status](https://travis-ci.org/upnetix/EnvChanger.svg?branch=master)](https://travis-ci.org/upnetix/EnvChanger)
 [![Version](https://img.shields.io/cocoapods/v/EnvChanger.svg?style=flat)](https://cocoapods.org/pods/EnvChanger)
 [![License](https://img.shields.io/cocoapods/l/EnvChanger.svg?style=flat)](https://cocoapods.org/pods/EnvChanger)
 [![Platform](https://img.shields.io/cocoapods/p/EnvChanger.svg?style=flat)](https://cocoapods.org/pods/EnvChanger)
