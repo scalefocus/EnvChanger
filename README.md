@@ -12,6 +12,10 @@ EnvChanger is a simple tool that helps developers and testers to switch between 
 Displays a button in the top left corner that when selected, presents an alert with the given possible environments
 allowing users to easily swap them.
 
+## Preview
+
+![](preview.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -99,7 +103,7 @@ pod 'EnvChanger'
 
 ## Author
 
-Gavril Tonev, gavril.tonev@upnetix.com
+Gavril Tonev, gavril.tonev@upnetix.com   
 Teodor Marinov, teodor.marinov@upnetix.com
 
 ## License
