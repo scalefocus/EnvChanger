@@ -25,7 +25,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 1. We assume you hold the list of your backend environments in an enum:
 
 ```swift
-enum Envs: String {
+enum Environments: String {
     case production = "https://production.server.com/"
     case staging = "https://staging.server.com/"
     case development = "https://development.server.com"
@@ -34,10 +34,10 @@ enum Envs: String {
 }
 ```
 
-2. Your enum needs to conform to the `EnvironmentRepresentable` protocol, like so:
+2. Your enum needs to conform to the `EnvironmentRepresentable` protocol, by implementing `environmentTitle`:
 
 ```swift
-enum Envs: String, EnvironmentRepresentable {
+enum Environments: String, EnvironmentRepresentable {
     case production = "https://production.server.com/"
     case staging = "https://staging.server.com/"
     case development = "https://development.server.com"
@@ -45,30 +45,29 @@ enum Envs: String, EnvironmentRepresentable {
     case edge = "edge.server.com"
     
     var environmentTitle: String {
-        return rawValue
+        rawValue
     }
 }
 ```
 
-3. Create an instance of `EnvChangerController` in your AppDelegate `didFinishLaunchingWithOptions`, passing your environemnt enum:
+3. Create an instance of `EnvChangerController` in your AppDelegate `didFinishLaunchingWithOptions`, passing your environment enum:
 
 ```swift
-// The variable holding your environemnt. Your setup might be different
-var ACTIVE_ENVIRONMENT = Envs.production.environmentTitle
+var window: UIWindow?
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    // Passing a completion handler, for when the user selects an environment
-    let envChanger = EnvChangerController(envs: Envs.self) { selectedEnvironment in
-        
-        // Updating your environment variable. You might need to update your networking service as well.
-        ACTIVE_ENVIRONMENT = selectedEnvironment.environmentTitle
-        print(ACTIVE_ENVIRONMENT)
+    /// Instantiate and pass handler for environment selection.
+    let envChanger = EnvChangerController(envs: NetworkService.Environments.self,
+                                          window: window) { selectedEnvironment in
+        NetworkService.activeEnvironment = selectedEnvironment.environmentTitle
     }
     
-    // Optional, so that the choice of environment persists the next time you start your app
-    ACTIVE_ENVIRONMENT = envChanger.getSavedEnvironment()
-
+    /// If an environment has been saved, set is as the active environment.
+    if let environment = envChanger.savedEnvironment {
+        NetworkService.activeEnvironment = environment
+    }
+    
     return true
 }
 ```
@@ -78,15 +77,15 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 #### Access the saved environment:
 
 ```swift
-getSavedEnvironment() -> String  
+envChanger.savedEnvironment
 ```
- *Note: It saves the chosen environment in UserDefaults.*
+ *Note: The chosen environment is saved in UserDefaults.*
 
 #### Resizes the button with the specified height/width.
 ```swift
 resizeFrame(newWidth: CGFloat, newHeight: CGFloat)  
 ```  
-*Note: If a image is set, the imageEdgeInsets are calculated and set as '(height + width) / 2'.*
+*Note: If an image is set, the imageEdgeInsets are calculated and set as '(height + width) / 2'.*
 
 #### Additional Notes
 - If no button image/title is passed in the constructor, by default it will set the button title to 'EN'.  
