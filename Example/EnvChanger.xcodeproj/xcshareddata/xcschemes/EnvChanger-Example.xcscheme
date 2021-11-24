@@ -20,20 +20,6 @@
                ReferencedContainer = "container:EnvChanger.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "EnvChanger_Tests.xctest"
-               BlueprintName = "EnvChanger_Tests"
-               ReferencedContainer = "container:EnvChanger.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -55,9 +41,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "EnvChanger_Tests.xctest"
-               BlueprintName = "EnvChanger_Tests"
+               BlueprintIdentifier = "96074F9C2754EEB900160EA6"
+               BuildableName = "EnvChanger_ExampleUITests.xctest"
+               BlueprintName = "EnvChanger_ExampleUITests"
                ReferencedContainer = "container:EnvChanger.xcodeproj">
             </BuildableReference>
          </TestableReference>

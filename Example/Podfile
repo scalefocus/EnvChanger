@@ -1,5 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
+platform :ios, '13.0'
+
 target 'EnvChanger_Example' do
+  pod 'EnvChanger', :path => '../'
+end
+
+target 'EnvChanger_ExampleUITests' do
   pod 'EnvChanger', :path => '../'
 end
