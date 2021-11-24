@@ -15,7 +15,7 @@ recompile.
   s.authors          = { 'Gavril Tonev' => 'gavril.tonev@upnetix.com', 'Teodor Marinov' => 'teodor.marinov@upnetix.com' }
   s.source           = { :git => 'https://github.com/scalefocus/EnvChanger.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   s.source_files = 'EnvChanger/Classes/**/*'
 

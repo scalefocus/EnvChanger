@@ -1,6 +1,6 @@
 //
 //  EnvironmentChangerWindow.swift
-//  EnvSelectionDemo
+//  EnvChanger
 //
 //  Created by Gavril Tonev on 7.08.19.
 //  Copyright © 2019 Gavril Tonev. All rights reserved.
