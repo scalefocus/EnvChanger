@@ -15,9 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        /// Instantiate to customise envButton `style` and `position` if needed.
+        let envButtonConfig = EnvButtonConfiguration(style: .title("ENV"),
+                                                     startingPosition: .init(y: .center, x: .center))
+        
         /// Instantiate and pass handler for environment selection.
         let envChanger = EnvChangerController(envs: NetworkService.Environments.self,
-                                              window: window) { selectedEnvironment in
+                                              window: window,
+                                              buttonConfiguration: envButtonConfig) { selectedEnvironment in
             NetworkService.activeEnvironment = selectedEnvironment.environmentTitle
         }
         
