@@ -64,8 +64,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     }
     
     /// If an environment has been saved, set is as the active environment.
-    if let environment = envChanger.savedEnvironment {
-        NetworkService.activeEnvironment = environment
+    if !envChanger.savedEnvironment.isEmpty {
+        NetworkService.activeEnvironment = envChanger.savedEnvironment
     }
     
     return true

@@ -41,7 +41,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
     private let appWindow: UIWindow?
     private let buttonConfiguration: EnvButtonConfiguration
     private let buttonFrameOriginOffset: CGFloat = 60
-    private(set) var button: UIButton!
+    private var button: UIButton!
     private var userDefaults: UserDefaults { .standard }
     private var application: UIApplication { .shared }
     private var envs: T.Type
@@ -156,7 +156,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
     private func saveFirstEnvironment() {
         guard let firstEnvironment = envs.allCases.first else { return }
         
-        if savedEnvironment == "" {
+        if savedEnvironment.isEmpty {
             userDefaults.set(firstEnvironment.environmentTitle, forKey: activeEnvKey)
         }
     }

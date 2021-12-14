@@ -12,14 +12,29 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		8561B273B0AD50C3A9A412E3 /* Pods_EnvChanger_ExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDB0A5D2EC3065FB71EB27A /* Pods_EnvChanger_ExampleUITests.framework */; };
+		96074FA02754EEB900160EA6 /* EnvChanger_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96074F9F2754EEB900160EA6 /* EnvChanger_ExampleUITests.swift */; };
 		96F16620274560890095FDE9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1661F274560890095FDE9 /* NetworkService.swift */; };
+		A3800FBAD49D94013F0F5603 /* Pods_EnvChanger_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96074F972754C33000160EA6 /* Pods_EnvChanger_Example.framework */; };
 		EEB0E3F4A89E566B95AF7AE3 /* Pods_EnvChanger_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00036A469B6DB90932469FB7 /* Pods_EnvChanger_Example.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96074FA22754EEB900160EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = EnvChanger_Example;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00036A469B6DB90932469FB7 /* Pods_EnvChanger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvChanger_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		031C4DDCA6FB404FA78571F3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0D5AD40AD77C9C655EF061E6 /* Pods-EnvChanger_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvChanger_ExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-EnvChanger_ExampleUITests/Pods-EnvChanger_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		101D4C694866A837C3AD789F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1CDB0A5D2EC3065FB71EB27A /* Pods_EnvChanger_ExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvChanger_ExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34221C68EBB7858752788363 /* Pods-EnvChanger_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvChanger_Example.debug.xcconfig"; path = "Target Support Files/Pods-EnvChanger_Example/Pods-EnvChanger_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		542B831DCD4507DDD63FEC2C /* EnvChanger.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EnvChanger.podspec; path = ../EnvChanger.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* EnvChanger_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnvChanger_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +45,13 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8C61BBFC45D77EA4295739C7 /* Pods-EnvChanger_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvChanger_Example.release.xcconfig"; path = "Target Support Files/Pods-EnvChanger_Example/Pods-EnvChanger_Example.release.xcconfig"; sourceTree = "<group>"; };
+		96074F952754C2EB00160EA6 /* EnvChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EnvChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96074F972754C33000160EA6 /* Pods_EnvChanger_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_EnvChanger_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96074F9D2754EEB900160EA6 /* EnvChanger_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvChanger_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96074F9F2754EEB900160EA6 /* EnvChanger_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvChanger_ExampleUITests.swift; sourceTree = "<group>"; };
+		96074FA12754EEB900160EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F1661F274560890095FDE9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ECBCEFEECBD8142C182C7926 /* Pods-EnvChanger_ExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvChanger_ExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-EnvChanger_ExampleUITests/Pods-EnvChanger_ExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +60,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB0E3F4A89E566B95AF7AE3 /* Pods_EnvChanger_Example.framework in Frameworks */,
+				A3800FBAD49D94013F0F5603 /* Pods_EnvChanger_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96074F9A2754EEB900160EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8561B273B0AD50C3A9A412E3 /* Pods_EnvChanger_ExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +80,7 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for EnvChanger */,
+				96074F9E2754EEB900160EA6 /* EnvChanger_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DA7C540252DA2122692E9D6B /* Pods */,
 				E2D2FEE6D76A023AFD4D12AE /* Frameworks */,
@@ -60,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* EnvChanger_Example.app */,
+				96074F9D2754EEB900160EA6 /* EnvChanger_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +129,22 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		96074F9E2754EEB900160EA6 /* EnvChanger_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96074F9F2754EEB900160EA6 /* EnvChanger_ExampleUITests.swift */,
+				96074FA12754EEB900160EA6 /* Info.plist */,
+			);
+			path = EnvChanger_ExampleUITests;
+			sourceTree = "<group>";
+		};
 		DA7C540252DA2122692E9D6B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				34221C68EBB7858752788363 /* Pods-EnvChanger_Example.debug.xcconfig */,
 				8C61BBFC45D77EA4295739C7 /* Pods-EnvChanger_Example.release.xcconfig */,
+				0D5AD40AD77C9C655EF061E6 /* Pods-EnvChanger_ExampleUITests.debug.xcconfig */,
+				ECBCEFEECBD8142C182C7926 /* Pods-EnvChanger_ExampleUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,7 +152,10 @@
 		E2D2FEE6D76A023AFD4D12AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96074F972754C33000160EA6 /* Pods_EnvChanger_Example.framework */,
+				96074F952754C2EB00160EA6 /* EnvChanger.framework */,
 				00036A469B6DB90932469FB7 /* Pods_EnvChanger_Example.framework */,
+				1CDB0A5D2EC3065FB71EB27A /* Pods_EnvChanger_ExampleUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,13 +182,33 @@
 			productReference = 607FACD01AFB9204008FA782 /* EnvChanger_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		96074F9C2754EEB900160EA6 /* EnvChanger_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96074FA62754EEB900160EA6 /* Build configuration list for PBXNativeTarget "EnvChanger_ExampleUITests" */;
+			buildPhases = (
+				07A815D3DD9F56BF1397C3CC /* [CP] Check Pods Manifest.lock */,
+				96074F992754EEB900160EA6 /* Sources */,
+				96074F9A2754EEB900160EA6 /* Frameworks */,
+				96074F9B2754EEB900160EA6 /* Resources */,
+				0E5444925C024E4AF8ED745D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96074FA32754EEB900160EA6 /* PBXTargetDependency */,
+			);
+			name = EnvChanger_ExampleUITests;
+			productName = EnvChanger_ExampleUITests;
+			productReference = 96074F9D2754EEB900160EA6 /* EnvChanger_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -150,14 +216,18 @@
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1250;
 					};
+					96074F9C2754EEB900160EA6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 				};
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "EnvChanger" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -167,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* EnvChanger_Example */,
+				96074F9C2754EEB900160EA6 /* EnvChanger_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -182,9 +253,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96074F9B2754EEB900160EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07A815D3DD9F56BF1397C3CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EnvChanger_ExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E5444925C024E4AF8ED745D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EnvChanger_ExampleUITests/Pods-EnvChanger_ExampleUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EnvChanger/EnvChanger.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnvChanger.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnvChanger_ExampleUITests/Pods-EnvChanger_ExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		818EB587ED16EBD5E58DA28C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,7 +356,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96074F992754EEB900160EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96074FA02754EEB900160EA6 /* EnvChanger_ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96074FA32754EEB900160EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* EnvChanger_Example */;
+			targetProxy = 96074FA22754EEB900160EA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -397,6 +531,57 @@
 			};
 			name = Release;
 		};
+		96074FA42754EEB900160EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5AD40AD77C9C655EF061E6 /* Pods-EnvChanger_ExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EnvChanger_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.EnvChanger.EnvChanger-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnvChanger_Example;
+			};
+			name = Debug;
+		};
+		96074FA52754EEB900160EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECBCEFEECBD8142C182C7926 /* Pods-EnvChanger_ExampleUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = EnvChanger_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.EnvChanger.EnvChanger-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EnvChanger_Example;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,6 +599,15 @@
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
 				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96074FA62754EEB900160EA6 /* Build configuration list for PBXNativeTarget "EnvChanger_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96074FA42754EEB900160EA6 /* Debug */,
+				96074FA52754EEB900160EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
