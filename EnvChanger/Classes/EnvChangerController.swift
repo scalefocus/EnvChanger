@@ -17,21 +17,12 @@ public protocol EnvironmentRepresentable: CaseIterable {
     var environmentTitle: String { get }
 }
 
-/// Enum cases for configuration of the layout of the floating button.
-public enum EnvButtonConfiguration {
-    
-    /// Configure the button layout with title.
-    case title(String)
-    
-    /// Configure the button layout with image.
-    case image(UIImage)
-}
-
 public class EnvChangerController<T>: UIViewController where T: EnvironmentRepresentable {
     class EnvAlertAction: UIAlertAction {
         var selectedEnv: T?
     }
     
+    // MARK: - Properties
     public var savedEnvironment: String {
         userDefaults.string(forKey: activeEnvKey) ?? ""
     }
@@ -40,12 +31,19 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
     private let window = EnvChangerWindow()
     private let appWindow: UIWindow?
     private let buttonConfiguration: EnvButtonConfiguration
-    private let buttonFrameOriginOffset: CGFloat = 60
     private var button: UIButton!
     private var userDefaults: UserDefaults { .standard }
     private var application: UIApplication { .shared }
     private var envs: T.Type
-    private var environmentSelectedHandler: ((T) -> Void)
+    private var environmentSelectedHandler: (T) -> Void
+    private var envButtonHorizontalOffset: CGFloat {
+        view.frame.width * buttonConfiguration.startingPosition.x.position
+    }
+    
+    private var envButtonVerticalOffset: CGFloat {
+        view.frame.height * buttonConfiguration.startingPosition.y.position
+    }
+    
     private var selectEnvironmentAlert: UIAlertController {
         let alert = UIAlertController(title: "Current env: \(savedEnvironment)",
                                       message: "Please select a backend environment",
@@ -72,6 +70,13 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
         return alert
     }
     
+    // MARK: - Lifecycle methods
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    // MARK: - Initializers
     /// Instantiate with the object of environments you would like to access.
     ///
     /// - Parameters:
@@ -83,7 +88,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
     ///   - Saves the first environment passed in to avoid getSavedEnvironment() to return an empty string.
     public init(envs: T.Type,
                 window: UIWindow?,
-                buttonConfiguration: EnvButtonConfiguration = .title("ENV"),
+                buttonConfiguration: EnvButtonConfiguration = .init(),
                 environmentSelectedHandler: @escaping (T) -> Void) {
         self.appWindow = window
         self.buttonConfiguration = buttonConfiguration
@@ -107,6 +112,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
         button.center = center
     }
     
+    // MARK: - Actions
     @objc private func environmentButtonTapped() {
         /// Prevents from attempting to present the same alert when clicking on the ENV change button.
         if appWindow?.rootViewController?.presentedViewController is UIAlertController { return }
@@ -128,10 +134,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
         appWindow?.rootViewController?.present(selectEnvironmentAlert, animated: true)
     }
     
-    override public func loadView() {
-        setupUI()
-    }
-    
+    // MARK: - Public methods
     /// Resizing the whole button.
     ///
     /// - Parameters:
@@ -151,6 +154,7 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
                                               right: imageEdgeInsets)
     }
     
+    // MARK: - Private methods
     /// When initializing the controller with the given environments,
     /// saves the first found environment from the list to UserDefaults.
     private func saveFirstEnvironment() {
@@ -174,30 +178,16 @@ public class EnvChangerController<T>: UIViewController where T: EnvironmentRepre
         let view = UIView()
         let button = UIButton(type: .custom)
         
-        DispatchQueue.main.async { [weak self] in
-            guard let buttonConfiguration = self?.buttonConfiguration else { return }
-            
-            switch buttonConfiguration {
-            case .title(let title):
-                button.setTitle(title, for: .normal)
-                button.titleLabel?.font = .systemFont(ofSize: 12)
-                
-                button.layer.cornerRadius = 4
-                button.layer.borderWidth = 1
-                button.setTitleColor(.white, for: .normal)
-                button.backgroundColor = .gray
-                return
-            case .image(let image):
-                button.setImage(image, for: .normal)
-                button.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
-                button.imageView?.contentMode = .scaleAspectFit
-            }
+        switch buttonConfiguration.style {
+        case .title(let title):
+            button.format(with: title)
+        case .image(let image):
+            button.format(with: image)
         }
         
         button.sizeToFit()
-        /// Starting point of the button is always in the top left corner.
-        button.frame = CGRect(origin: CGPoint(x: view.frame.minX + buttonFrameOriginOffset,
-                                              y: view.frame.minY + buttonFrameOriginOffset),
+        button.frame = CGRect(origin: CGPoint(x: (view.frame.minX + envButtonHorizontalOffset) - button.frame.width / 2,
+                                              y: (view.frame.minY + envButtonVerticalOffset) - button.frame.height / 2),
                               size: button.bounds.size)
         view.addSubview(button)
         self.view = view

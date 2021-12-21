@@ -57,9 +57,14 @@ var window: UIWindow?
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    /// Instantiate to customise envButton `style` and `position` if needed.
+    let envButtonConfig = EnvButtonConfiguration(style: .title("env"),
+                                                 startingPosition: .init(y: .center, x: .center))
+    
     /// Instantiate and pass handler for environment selection.
     let envChanger = EnvChangerController(envs: NetworkService.Environments.self,
-                                          window: window) { selectedEnvironment in
+                                          window: window,
+                                          buttonConfiguration: envButtonConfig) { selectedEnvironment in
         NetworkService.activeEnvironment = selectedEnvironment.environmentTitle
     }
     
@@ -118,8 +123,3 @@ A new version is released by pushing an updated tag to `master`:
 git tag -a 1.2.3 -m "Release 1.2.3"
 git push --follow-tags
 ```
-
-## TODO
-
-• Implement configurable button style.  
-• Implement configurable starting button position.
